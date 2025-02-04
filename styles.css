@@ -1,0 +1,254 @@
+:root {
+  --color: rgb(96, 17, 17);
+}
+body {
+  background-image: linear-gradient(red, yellow);
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 10px;
+  height: 100vh;
+}
+main {
+  border: 1px solid;
+  display: grid;
+  grid-template-rows: 0.7fr 2fr 1fr 50px;
+  height: 70vh;
+  position: relative;
+}
+nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  color: wheat;
+  background-color: rgb(96, 17, 17);
+}
+.navbar {
+  padding-right: 20px;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0 auto 0 0;
+  display: flex;
+  gap: 7px;
+  list-style: none;
+}
+.navbar > a {
+  padding-right: 10px;
+  padding-top: 2px;
+  margin: 0;
+  color: wheat;
+}
+.time {
+  width: 100%;
+  display: grid;
+  row-gap: 20px;
+  grid-template-rows: 40px 30px;
+  position: relative;
+  right: 5px;
+  justify-items: center;
+}
+#counting-time {
+  font-size: 35px;
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+}
+.container-time {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.time-button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  width: fit-content;
+  transition: transform 0.3s ease;
+}
+.time-button:hover {
+  transform: scale(1.2);
+}
+
+button > img {
+  width: 30px;
+  border-radius: 5px;
+  background-color: rgb(226, 94, 94);
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.exercise {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 60px;
+  width: 100%;
+}
+.num {
+  width: fit-content;
+  height: 12vh;
+}
+.num > p {
+  font-size: 40px;
+  margin-top: 20px;
+}
+.answer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.welcome {
+  margin-top: 50px;
+  text-align: center;
+}
+.instructions {
+  text-align: center;
+}
+
+#addition {
+  font-size: 60px;
+  margin: 0;
+}
+input[type="number"] {
+  position: relative;
+  top: 0;
+  padding-left: 20px;
+  margin: 0;
+  width: 33vw;
+  height: 25px;
+  border: 4px solid var(--color);
+}
+button {
+  width: 100px;
+  height: fit-content;
+  font-size: 15pt;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgb(226, 94, 94);
+}
+#answerButton,
+#endButton {
+  font-size: 15pt;
+  font-family: roboto, sans-serif;
+}
+#answerButton:hover,
+#endButton:hover {
+  background-color: rgb(96, 17, 17);
+  color: white;
+}
+.button {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.footer {
+  margin-left: auto;
+  width: 200px;
+}
+h2 {
+  margin: 20px 20px 0 0;
+}
+@media (max-width: 1000px) {
+
+  .num {
+    height: fit-content;
+  }
+  .exercise {
+    height: 150px;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    background-image: linear-gradient(red, yellow);
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 40px;
+    height: 100vh;
+  }
+  input[type="number"] {
+    width: 40vw;
+  }
+  .exercise {
+    gap: 30px;
+  }
+  .num > p {
+    font-size: 25px;
+  }
+  .num {
+    border-radius: 0%;
+    height: fit-content;
+  }
+  #addition {
+    font-size: 40px;
+  }
+}
+@media (max-width: 400px) {
+  .num > p {
+    font-size: 25px;
+  }
+}
+@media (max-width: 300px) {
+  body {
+    grid-template-rows: 0.5fr 2fr 20px;
+  }
+  .num > p {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  input[type="number"] {
+    width: 80%;
+    height: 40px;
+    font-size: 12px;
+    margin-top: 0;
+  }
+  #addition {
+    padding: 0;
+    font-size: 30px;
+  }
+  .button {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  main {
+    height: 90vh;
+    gap: 0;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 20px;
+  }
+  .exercise {
+    gap: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20vh;
+    width: 150px;
+    justify-content: space-between;
+  }
+  nav {
+    height: fit-content;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1px;
+  }
+  .navbar > li {
+    font-size: 12px;
+    padding-top: 2px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+}
